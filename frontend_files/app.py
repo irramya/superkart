@@ -110,15 +110,15 @@ product_type_category = st.selectbox(
 
 payload = {
     "Product_Weight": product_weight,
-    "Product_Sugar_Content_Num": 0 if product_sugar_content == "No Sugar" else 1 if product_sugar_content == "Low Sugar" else 2,
+    "Product_Sugar_Content": product_sugar_content,
     "Product_Allocated_Area": product_allocated_area,
     "Product_MRP": product_mrp,
-    "Store_Size_Num": 2 if store_size == "High" else 1 if store_size == "Medium" else 0,
-    "Store_Location_City_Type_Num": 2 if store_location_city_type == "Tier 1" else 1 if store_location_city_type == "Tier 2" else 0,
+    "Store_Size": store_size,
+    "Store_Location_City_Type": store_location_city_type,
     "Store_Type": store_type,
-    "Product_Id_Char": product_id_char,
+    "Product_Id_char": product_id_char,
     "Store_Age_Years": store_age_years,
-    "Product_Type_Category_Num": 1 if product_type_category == "Perishables" else 0,
+    "Product_Type_Category": product_type_category,
 }
 
 if st.button("Predict"):
